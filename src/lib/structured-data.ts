@@ -24,11 +24,13 @@ export function organizationSchema() {
     logo: absoluteUrl("/aretos.png"),
     description: "Jasa pembuatan website dan aplikasi untuk kebutuhan bisnis.",
     email: "hello@aretos.id",
+    telephone: "+6281318726585",
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "sales",
         email: "hello@aretos.id",
+        telephone: "+6281318726585",
         availableLanguage: ["Indonesian", "English"],
       },
     ],
