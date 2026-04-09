@@ -1,0 +1,41 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { breadcrumbSchema, webPageSchema } from "../lib/structured-data";
+---
+
+<MainLayout
+  title="Legal | aretos.id"
+  description="Informasi legal dasar penggunaan website aretos.id."
+  canonicalPath="/legal"
+  noindex={false}
+  structuredData={[
+    webPageSchema("Legal | aretos.id", "Informasi legal dasar penggunaan website aretos.id.", "/legal"),
+    breadcrumbSchema([
+      { name: "Beranda", path: "/" },
+      { name: "Legal", path: "/legal" }
+    ])
+  ]}
+>
+  <section class="section reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy & Terms (Ringkas)</h1>
+      <div class="grid-2">
+        <article class="card hover-lift reveal-delay-1">
+          <h3>Privacy Policy</h3>
+          <p>
+            Data yang Anda kirim melalui email atau form kontak hanya digunakan untuk komunikasi project, penyusunan
+            penawaran, dan tindak lanjut layanan.
+          </p>
+        </article>
+        <article class="card hover-lift reveal-delay-2">
+          <h3>Terms</h3>
+          <p>
+            Ruang lingkup pekerjaan, timeline, revisi, dan pembayaran mengacu pada proposal serta kontrak kerja yang
+            disepakati kedua pihak.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</MainLayout>

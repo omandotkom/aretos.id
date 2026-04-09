@@ -1,0 +1,64 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { breadcrumbSchema, serviceSchema, webPageSchema } from "../lib/structured-data";
+
+const services = [
+  {
+    name: "Company Profile Website",
+    output: "Home, Layanan, Portfolio, Tentang, Kontak, SEO dasar",
+    timeline: "1-2 minggu",
+    fit: "Cocok untuk bisnis yang ingin terlihat kredibel saat dipresentasikan ke calon klien"
+  },
+  {
+    name: "Web App Custom",
+    output: "Dashboard, akses berbasis role, workflow operasional",
+    timeline: "3-8 minggu",
+    fit: "Cocok untuk tim yang ingin memindahkan proses manual ke sistem yang bisa diaudit"
+  },
+  {
+    name: "Integration & Automation",
+    output: "Integrasi API, sinkronisasi data, automasi task repetitif",
+    timeline: "1-4 minggu",
+    fit: "Cocok untuk bisnis yang sudah memakai banyak tools tapi alurnya belum terhubung"
+  }
+];
+---
+
+<MainLayout
+  title="Layanan | aretos.id"
+  description="Pilihan layanan aretos.id untuk website, aplikasi custom, dan integrasi sistem bisnis."
+  canonicalPath="/services"
+  keywords={["jasa pembuatan website", "web app custom indonesia", "integrasi api bisnis"]}
+  structuredData={[
+    webPageSchema(
+      "Layanan | aretos.id",
+      "Pilihan layanan aretos.id untuk website, aplikasi custom, dan integrasi sistem bisnis.",
+      "/services"
+    ),
+    breadcrumbSchema([
+      { name: "Beranda", path: "/" },
+      { name: "Layanan", path: "/services" }
+    ]),
+    ...services.map((service) => serviceSchema(service.name, service.fit, "/services"))
+  ]}
+>
+  <section class="section reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">Layanan</span>
+      <h1>Layanan terstruktur untuk membantu bisnis bergerak lebih cepat.</h1>
+      <p class="lead">Setiap paket dirancang agar scope, timeline, dan ekspektasi hasil bisa disepakati sejak awal.</p>
+      <div class="grid-3">
+        {
+          services.map((service, index) => (
+            <article class={`card hover-lift reveal-delay-${Math.min(index + 1, 3)}`}>
+              <h3>{service.name}</h3>
+              <p>{service.fit}</p>
+              <p><strong>Output:</strong> {service.output}</p>
+              <p><strong>Estimasi:</strong> {service.timeline}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,109 @@
+---
+import "../styles/global.css";
+import { absoluteUrl, organizationSchema } from "../lib/structured-data";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  keywords?: string[];
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, canonicalPath, ogImage, noindex, keywords, structuredData } = Astro.props as Props;
+const canonicalUrl = absoluteUrl(canonicalPath ?? Astro.url.pathname);
+const ogImageUrl = absoluteUrl(ogImage ?? "/logo-dummy.svg");
+const robotsContent = noindex ? "noindex,nofollow" : "index,follow,max-image-preview:large";
+const graphNodes = [
+  organizationSchema(),
+  ...(Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : []),
+];
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": graphNodes,
+};
+const navItems = [
+  { href: "/", label: "Beranda" },
+  { href: "/services", label: "Layanan" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/about", label: "Tentang" },
+  { href: "/contact", label: "Kontak" }
+];
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={robotsContent} />
+    <meta name="author" content="aretos.id" />
+    {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(", ")} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="aretos.id" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content="aretos.id website preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header reveal">
+        <div class="container nav-wrap">
+          <a href="/" class="brand" aria-label="aretos.id home">
+            <img src="/logo-dummy.svg" alt="aretos.id dummy logo" width="34" height="34" />
+            <span>aretos.id</span>
+          </a>
+          <nav aria-label="Primary navigation">
+            <ul class="nav-list">
+              {
+                navItems.map((item) => (
+                  <li>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+          <a href="/contact" class="btn btn-primary">Konsultasi Gratis</a>
+        </div>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer reveal delay-1">
+        <div class="container footer-wrap">
+          <div>
+            <p class="footer-brand">aretos.id</p>
+            <p class="footer-copy">Mitra pengembangan website dan aplikasi untuk tim yang ingin bergerak lebih cepat.</p>
+          </div>
+          <div class="footer-links">
+            <a href="/legal">Legal</a>
+            <a href="/contact">Kontak</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

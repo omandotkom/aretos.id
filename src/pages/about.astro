@@ -1,0 +1,53 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { breadcrumbSchema, webPageSchema } from "../lib/structured-data";
+---
+
+<MainLayout
+  title="Tentang | aretos.id"
+  description="Profil aretos.id sebagai partner pengembangan website dan aplikasi bisnis."
+  canonicalPath="/about"
+  keywords={["tentang aretos", "software partner bisnis", "tim pengembang web indonesia"]}
+  structuredData={[
+    webPageSchema(
+      "Tentang | aretos.id",
+      "Profil aretos.id sebagai partner pengembangan website dan aplikasi bisnis.",
+      "/about"
+    ),
+    breadcrumbSchema([
+      { name: "Beranda", path: "/" },
+      { name: "Tentang", path: "/about" }
+    ])
+  ]}
+>
+  <section class="section reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">Tentang Kami</span>
+      <h1>Tim ringkas dengan standar kerja yang jelas.</h1>
+      <div class="grid-2">
+        <article class="card hover-lift reveal-delay-1">
+          <h3>Siapa kami</h3>
+          <p>
+            aretos.id adalah kolaborasi dua founder yang fokus membantu bisnis membangun website dan aplikasi web yang
+            benar-benar dipakai dalam operasional harian.
+          </p>
+        </article>
+        <article class="card hover-lift reveal-delay-2">
+          <h3>Cara kami bekerja</h3>
+          <p>
+            Kami bekerja langsung dengan decision maker, menulis scope sejak awal, dan membagi project per milestone agar
+            progress selalu bisa dipantau.
+          </p>
+        </article>
+        <article class="card hover-lift reveal-delay-2">
+          <h3>Prinsip utama</h3>
+          <p>Teknis rapi, timeline realistis, dokumentasi jelas, dan serah terima source code tanpa vendor lock-in.</p>
+        </article>
+        <article class="card hover-lift reveal-delay-3">
+          <h3>Fokus project</h3>
+          <p>Company profile website, portal internal, dashboard operasional, serta integrasi sistem berbasis API.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</MainLayout>

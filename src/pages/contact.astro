@@ -1,0 +1,59 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { absoluteUrl, breadcrumbSchema, webPageSchema } from "../lib/structured-data";
+
+const contactSchema = {
+  "@type": "ContactPage",
+  name: "Kontak aretos.id",
+  url: absoluteUrl("/contact"),
+  description: "Halaman kontak aretos.id untuk diskusi kebutuhan website atau aplikasi bisnis.",
+  mainEntity: {
+    "@type": "Organization",
+    name: "aretos.id",
+    email: "hello@aretos.id",
+    telephone: "+6281200000000"
+  }
+};
+---
+
+<MainLayout
+  title="Kontak | aretos.id"
+  description="Hubungi aretos.id untuk konsultasi kebutuhan website atau aplikasi bisnis."
+  canonicalPath="/contact"
+  keywords={["kontak jasa website", "konsultasi aplikasi bisnis", "hubungi software house"]}
+  structuredData={[
+    webPageSchema(
+      "Kontak | aretos.id",
+      "Hubungi aretos.id untuk konsultasi kebutuhan website atau aplikasi bisnis.",
+      "/contact"
+    ),
+    breadcrumbSchema([
+      { name: "Beranda", path: "/" },
+      { name: "Kontak", path: "/contact" }
+    ]),
+    contactSchema
+  ]}
+>
+  <section class="section reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">Konsultasi</span>
+      <h1>Ceritakan kebutuhan Anda, kami bantu susun scope yang masuk akal.</h1>
+      <p class="lead">Sesi awal digunakan untuk memahami prioritas bisnis, estimasi timeline, dan opsi implementasi.</p>
+      <div class="grid-2">
+        <article class="card hover-lift reveal-delay-1">
+          <h3>Kontak cepat</h3>
+          <p>Email: <a href="mailto:hello@aretos.id">hello@aretos.id</a></p>
+          <p>WhatsApp: <a href="https://wa.me/6281200000000">+62 812-0000-0000</a></p>
+          <p>Jam kerja: Senin - Jumat, 09:00 - 18:00 WIB</p>
+        </article>
+        <article class="card hover-lift reveal-delay-2">
+          <h3>Format brief agar diskusi cepat</h3>
+          <p>1. Tujuan bisnis yang ingin dicapai dari project.</p>
+          <p>2. Fitur inti yang wajib ada di versi pertama.</p>
+          <p>3. Estimasi timeline dan budget range yang tersedia.</p>
+          <p>4. Deadline khusus atau event penting terkait launch.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</MainLayout>

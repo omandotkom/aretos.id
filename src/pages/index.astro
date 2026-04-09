@@ -1,0 +1,134 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema, webSiteSchema } from "../lib/structured-data";
+
+const serviceHighlights = [
+  "Website company profile dan landing page yang siap dipromosikan",
+  "Web app custom untuk operasional tim yang lebih efisien",
+  "Integrasi API, automasi proses, dan maintenance berkelanjutan"
+];
+
+const faqs = [
+  {
+    question: "Berapa lama pengerjaan website company profile?",
+    answer: "Rata-rata 1 sampai 2 minggu, tergantung kelengkapan materi konten dan kebutuhan revisi."
+  },
+  {
+    question: "Apakah source code diserahkan penuh?",
+    answer: "Ya. Setelah pelunasan, source code dan akses aset project diserahkan ke pihak klien."
+  },
+  {
+    question: "Bisa lanjut maintenance setelah launch?",
+    answer: "Bisa. Kami menyediakan opsi maintenance bulanan untuk update, bug fixing, dan iterasi ringan."
+  }
+];
+---
+
+<MainLayout
+  title="aretos.id | Partner Pembuatan Website & Aplikasi Bisnis"
+  description="Aretos membantu bisnis membangun website dan aplikasi yang cepat, rapi, dan siap digunakan tim."
+  canonicalPath="/"
+  keywords={["jasa pembuatan aplikasi", "jasa website company profile", "web app custom", "software house indonesia"]}
+  structuredData={[
+    webSiteSchema(),
+    webPageSchema(
+      "aretos.id | Partner Pembuatan Website & Aplikasi Bisnis",
+      "Aretos membantu bisnis membangun website dan aplikasi yang cepat, rapi, dan siap digunakan tim.",
+      "/"
+    ),
+    breadcrumbSchema([{ name: "Beranda", path: "/" }]),
+    serviceSchema("Pembuatan Website dan Aplikasi Bisnis", "Jasa pembuatan website, web app custom, dan integrasi API.", "/services"),
+    faqSchema(faqs)
+  ]}
+>
+  <section class="section reveal">
+    <div class="container hero">
+      <article class="card hover-lift reveal-delay-1">
+        <span class="eyebrow reveal-delay-1">Software Partner</span>
+        <h1>
+          Website dan aplikasi yang bukan cuma bagus dilihat, tapi juga menghasilkan.
+        </h1>
+        <p class="lead">
+          Kami membantu bisnis merancang, membangun, dan merilis produk digital dengan alur kerja jelas dari discovery sampai
+          launch, sehingga keputusan Anda lebih aman dari sisi waktu, biaya, dan kualitas.
+        </p>
+        <div class="cta-row reveal-delay-2">
+          <a href="/contact" class="btn btn-primary pulse-soft">Jadwalkan Konsultasi</a>
+          <a href="/services" class="btn btn-secondary">Lihat Paket Layanan</a>
+        </div>
+      </article>
+      <aside class="hero-metrics reveal-delay-2">
+        <div class="metric hover-lift">
+          <strong>2-4 minggu</strong>
+          <span>Rata-rata delivery untuk project website dan scope menengah</span>
+        </div>
+        <div class="metric hover-lift">
+          <strong>100%</strong>
+          <span>Source code dan akses aset diserahkan penuh ke klien</span>
+        </div>
+        <div class="metric hover-lift">
+          <strong>30 hari</strong>
+          <span>Garansi bug fixing setelah produk go-live</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-tight reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">Layanan</span>
+      <div class="grid-3">
+        {
+          serviceHighlights.map((item, index) => (
+            <article class={`card hover-lift reveal-delay-${Math.min(index + 1, 3)}`}>
+              <h3>{item}</h3>
+              <p>Setiap project dibangun berdasarkan tujuan bisnis yang bisa diukur, bukan sekadar checklist fitur.</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">Cara Kerja</span>
+      <h2>Proses kerja yang rapi dari awal sampai handover.</h2>
+      <div class="grid-2">
+        <article class="card hover-lift reveal-delay-1">
+          <h3>01. Discovery</h3>
+          <p>Kami petakan kebutuhan bisnis, user flow, prioritas fitur, dan scope yang realistis.</p>
+        </article>
+        <article class="card hover-lift reveal-delay-2">
+          <h3>02. Build</h3>
+          <p>Pengembangan dilakukan bertahap dengan update progres rutin dan milestone terukur.</p>
+        </article>
+        <article class="card hover-lift reveal-delay-2">
+          <h3>03. QA & Launch</h3>
+          <p>Kami lakukan pengujian inti, review performa, lalu launch ke environment produksi.</p>
+        </article>
+        <article class="card hover-lift reveal-delay-3">
+          <h3>04. Support</h3>
+          <p>Pasca rilis, kami dampingi perbaikan bug, stabilisasi, dan iterasi prioritas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight reveal">
+    <div class="container reveal-delay-1">
+      <span class="eyebrow">FAQ</span>
+      <h2>Pertanyaan yang paling sering diajukan calon klien.</h2>
+      <div class="grid-3">
+        {
+          faqs.map((item, index) => (
+            <article class={`card hover-lift reveal-delay-${Math.min(index + 1, 3)}`}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>
