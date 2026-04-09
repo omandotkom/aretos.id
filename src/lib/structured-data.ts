@@ -21,7 +21,7 @@ export function organizationSchema() {
     "@id": `${SITE_URL}/#organization`,
     name: BRAND_NAME,
     url: SITE_URL,
-    logo: absoluteUrl("/logo-dummy.svg"),
+    logo: absoluteUrl("/aretos.png"),
     description: "Jasa pembuatan website dan aplikasi untuk kebutuhan bisnis.",
     email: "hello@aretos.id",
     contactPoint: [

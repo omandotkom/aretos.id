@@ -11,11 +11,38 @@
 /logo-dummy.svg
   Cache-Control: public, max-age=604800
 
+/aretos.svg
+  Cache-Control: public, max-age=604800
+
+/aretos.png
+  Cache-Control: public, max-age=604800
+
 /favicon.svg
   Cache-Control: public, max-age=604800
 
 /favicon.ico
   Cache-Control: public, max-age=604800
+
+/favicon-16x16.png
+  Cache-Control: public, max-age=604800
+
+/favicon-32x32.png
+  Cache-Control: public, max-age=604800
+
+/favicon-48x48.png
+  Cache-Control: public, max-age=604800
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+
+/android-chrome-192x192.png
+  Cache-Control: public, max-age=604800
+
+/android-chrome-512x512.png
+  Cache-Control: public, max-age=604800
+
+/site.webmanifest
+  Cache-Control: public, max-age=3600
 
 /robots.txt
   Cache-Control: public, max-age=3600
