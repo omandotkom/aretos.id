@@ -93,7 +93,12 @@ const navItems = [
           </nav>
           <a href="/contact" class="btn btn-primary nav-cta">Konsultasi Gratis</a>
           <details class="mobile-nav">
-            <summary class="mobile-nav-toggle">Menu</summary>
+            <summary class="mobile-nav-toggle" aria-label="Buka menu navigasi">
+              <span class="sr-only">Buka menu</span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </summary>
             <div class="mobile-nav-panel">
               <nav aria-label="Primary navigation mobile">
                 <ul class="mobile-nav-list">
@@ -106,7 +111,7 @@ const navItems = [
                   }
                 </ul>
               </nav>
-              <a href="/contact" class="btn btn-primary mobile-nav-cta">Konsultasi Gratis</a>
+              <a href="/contact" class="btn btn-primary mobile-nav-cta bounce-soft">Konsultasi Gratis</a>
             </div>
           </details>
         </div>
@@ -129,5 +134,33 @@ const navItems = [
         </div>
       </footer>
     </div>
+    <script is:inline>
+      const mobileNavs = document.querySelectorAll(".mobile-nav");
+
+      mobileNavs.forEach((mobileNav) => {
+        const links = mobileNav.querySelectorAll("a");
+
+        document.addEventListener("click", (event) => {
+          const target = event.target;
+          if (!(target instanceof Node)) return;
+
+          if (mobileNav.hasAttribute("open") && !mobileNav.contains(target)) {
+            mobileNav.removeAttribute("open");
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && mobileNav.hasAttribute("open")) {
+            mobileNav.removeAttribute("open");
+          }
+        });
+
+        links.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileNav.removeAttribute("open");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

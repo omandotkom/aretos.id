@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { breadcrumbSchema, webPageSchema } from "../lib/structured-data";
+import { aboutPageSchema, breadcrumbSchema, webPageSchema } from "../lib/structured-data";
 ---
 
 <MainLayout
@@ -10,6 +10,11 @@ import { breadcrumbSchema, webPageSchema } from "../lib/structured-data";
   keywords={["tentang aretos", "software partner bisnis", "tim pengembang web indonesia"]}
   structuredData={[
     webPageSchema(
+      "Tentang | aretos.id",
+      "Profil aretos.id sebagai partner pengembangan website dan aplikasi bisnis.",
+      "/about"
+    ),
+    aboutPageSchema(
       "Tentang | aretos.id",
       "Profil aretos.id sebagai partner pengembangan website dan aplikasi bisnis.",
       "/about"

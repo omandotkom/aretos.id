@@ -1,5 +1,14 @@
 export const SITE_URL = "https://aretos.id";
 export const BRAND_NAME = "aretos.id";
+const ORGANIZATION_KNOWS_ABOUT = [
+  "Company profile website",
+  "Landing page",
+  "Web app custom",
+  "Dashboard operasional",
+  "Integrasi API",
+  "Automasi proses bisnis",
+  "Maintenance website dan aplikasi",
+];
 
 type BreadcrumbItem = {
   name: string;
@@ -22,15 +31,19 @@ export function organizationSchema() {
     name: BRAND_NAME,
     url: SITE_URL,
     logo: absoluteUrl("/aretos.png"),
+    image: absoluteUrl("/aretos.png"),
+    slogan: "Partner pengembangan website dan aplikasi bisnis.",
     description: "Jasa pembuatan website dan aplikasi untuk kebutuhan bisnis.",
     email: "hello@aretos.id",
     telephone: "+6281318726585",
+    knowsAbout: ORGANIZATION_KNOWS_ABOUT,
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "sales",
         email: "hello@aretos.id",
         telephone: "+6281318726585",
+        url: absoluteUrl("/contact"),
         availableLanguage: ["Indonesian", "English"],
       },
     ],
@@ -57,6 +70,26 @@ export function webPageSchema(name: string, description: string, path: string) {
     url: absoluteUrl(path),
     isPartOf: {
       "@id": `${SITE_URL}/#website`,
+    },
+    inLanguage: "id-ID",
+  };
+}
+
+export function aboutPageSchema(name: string, description: string, path: string) {
+  return {
+    "@type": "AboutPage",
+    "@id": `${absoluteUrl(path)}#aboutpage`,
+    name,
+    description,
+    url: absoluteUrl(path),
+    isPartOf: {
+      "@id": `${SITE_URL}/#website`,
+    },
+    about: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    mainEntity: {
+      "@id": `${SITE_URL}/#organization`,
     },
     inLanguage: "id-ID",
   };
