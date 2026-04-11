@@ -80,7 +80,7 @@ const navItems = [
             <img src="/aretos.svg" alt="aretos.id logo" width="34" height="34" />
             <span>aretos.id</span>
           </a>
-          <nav aria-label="Primary navigation">
+          <nav class="desktop-nav" aria-label="Primary navigation">
             <ul class="nav-list">
               {
                 navItems.map((item) => (
@@ -91,7 +91,24 @@ const navItems = [
               }
             </ul>
           </nav>
-          <a href="/contact" class="btn btn-primary">Konsultasi Gratis</a>
+          <a href="/contact" class="btn btn-primary nav-cta">Konsultasi Gratis</a>
+          <details class="mobile-nav">
+            <summary class="mobile-nav-toggle">Menu</summary>
+            <div class="mobile-nav-panel">
+              <nav aria-label="Primary navigation mobile">
+                <ul class="mobile-nav-list">
+                  {
+                    navItems.map((item) => (
+                      <li>
+                        <a href={item.href}>{item.label}</a>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </nav>
+              <a href="/contact" class="btn btn-primary mobile-nav-cta">Konsultasi Gratis</a>
+            </div>
+          </details>
         </div>
       </header>
 
