@@ -30,5 +30,13 @@
     "impact": "Closing rate meningkat 40%, kemudahan user mendapatkan informasi paket travel haji dan umroh yang tersedia. Termasuk meningkatkan brand trust dengan galleri bukti berbagai macam perjalanan.",
     "image": "/images/portfolio/Screenshot 2026-04-12 163429.png",
     "imageAlt": "Contoh tampilan platform approval internal"
+  },
+  {
+    "title": "Implementasi AI Agent Openclaw",
+    "challenge": "Kebutuhan client akan personalized AI Agent yang dapat bekerja 24/7 mengeksekusi tugas yang telah diberikan secara otomatis.",
+    "solution": "Implementasi openclaw yang diintegrasikan dengan bot telegram dan openclaw skill gog (Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs)",
+    "impact": "Peningkatan produktivitas karena kolaborasi dengan AI Agent yang melakukan tugas secara otomatis dan 24/7",
+    "image": "/images/portfolio/Openclaw.png",
+    "imageAlt": "Implementasi AI Agent Openclaw"
   }
 ]
