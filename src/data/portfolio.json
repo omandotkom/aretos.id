@@ -32,11 +32,11 @@
     "imageAlt": "Contoh tampilan platform approval internal"
   },
   {
-    "title": "Implementasi AI Agent Openclaw",
+    "title": "Implementasi AI Agent OpenClaw",
     "challenge": "Kebutuhan client akan personalized AI Agent yang dapat bekerja 24/7 mengeksekusi tugas yang telah diberikan secara otomatis.",
-    "solution": "Implementasi openclaw yang diintegrasikan dengan bot telegram dan openclaw skill gog (Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs)",
+    "solution": "Implementasi OpenClaw yang diintegrasikan dengan bot telegram dan skill gog (Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs)",
     "impact": "Peningkatan produktivitas karena kolaborasi dengan AI Agent yang melakukan tugas secara otomatis dan 24/7",
     "image": "/images/portfolio/Openclaw.png",
-    "imageAlt": "Implementasi AI Agent Openclaw"
+    "imageAlt": "Implementasi AI Agent OpenClaw"
   }
 ]
