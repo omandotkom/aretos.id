@@ -26,7 +26,7 @@ import projects from "../data/portfolio.json";
       <span class="eyebrow">Portfolio</span>
       <h1>Studi kasus dengan tantangan nyata dan hasil yang terukur.</h1>
       <p class="lead">Format kerja kami selalu berangkat dari masalah bisnis, bukan langsung lompat ke teknologi.</p>
-      <div class="grid-3">
+      <div class="grid-3 portfolio-grid">
         {
           projects.map((project, index) => (
             <article class={`card hover-lift portfolio-card reveal-delay-${Math.min(index + 1, 3)}`}>
