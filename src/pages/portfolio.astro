@@ -34,9 +34,17 @@ import projects from "../data/portfolio.json";
                 <img src={project.image} alt={project.imageAlt} loading="lazy" />
               </figure>
               <h3>{project.title}</h3>
-              <p><strong>Tantangan:</strong> {project.challenge}</p>
-              <p><strong>Solusi:</strong> {project.solution}</p>
-              <p><strong>Hasil:</strong> {project.impact}</p>
+              <details class="portfolio-details">
+                <summary class="portfolio-expand">
+                  <span class="when-closed">Lihat detail</span>
+                  <span class="when-open">Tutup detail</span>
+                </summary>
+                <div class="portfolio-content">
+                  <p><strong>Tantangan:</strong> {project.challenge}</p>
+                  <p><strong>Solusi:</strong> {project.solution}</p>
+                  <p><strong>Hasil:</strong> {project.impact}</p>
+                </div>
+              </details>
             </article>
           ))
         }
