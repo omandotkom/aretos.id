@@ -1,5 +1,13 @@
 [
   {
+    "title": "yhschurch.com",
+    "challenge": "Gereja YHS dengan 60 cabang gereja yang tersebar di seluruh Indonesia membutuhkan website profil resmi dengan tampilan yang menarik, informasi lokasi gereja yang lengkap, dan mempermudah jemaat dalam mendapatkan pelayanan dari gereja.",
+    "solution": "Pembuatan website profil resmi gereja YHS dengan tampilan yang lebih modern dan penuh dengan fungsionalitas. Pengguna bisa mendapatkan informasi detail Tentang Gereja YHS, mendapatkan informasi Gereja YHS terdekat, bergabung dengan komunitas, mendapatkan pelayanan pastoral yang dibutuhkan dengan respon yang cepat, menikmati konten kotbah dan pujian penyembahan karya gereja YHS, hingga bisa mendapatkan informasi dan konsultasi 24/7 dengan bantuan YHS AI Assistant",
+    "impact": "Respon yang sangat baik dari ketua sinode dan seluruh jemaat gereja YHS di seluruh Indonesia saat website ini dilaunching karena berbagai kemudahan dan fungsionalitasnya.",
+    "image": "/images/portfolio/Screenshot 2026-04-12 200649.png",
+    "imageAlt": "YHS Church"
+  },
+  {
     "title": "Hubnesia.com",
     "challenge": "Membutuhkan sistem digitalisasi pembelian nomor verifikasi handphone dan layanan digital lainnya.",
     "solution": "Pembuatan sistem yang dapat menangkap sms verifikasi masuk dari berbagai negara dan layanan, terintegrasi dengan payment gateway.",
