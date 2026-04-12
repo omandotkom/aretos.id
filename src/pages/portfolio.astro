@@ -1,27 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { breadcrumbSchema, webPageSchema } from "../lib/structured-data";
-
-const projects = [
-  {
-    title: "Retail Ops Dashboard",
-    challenge: "Stok dan pembelian tercatat di spreadsheet terpisah.",
-    solution: "Dashboard terpusat untuk stok, procurement, dan laporan mingguan otomatis.",
-    impact: "Waktu rekap turun dari 6 jam menjadi 45 menit per minggu."
-  },
-  {
-    title: "Lead Capture Landing System",
-    challenge: "Tim sales kehilangan lead dari berbagai channel.",
-    solution: "Landing page + form terintegrasi ke CRM dan notifikasi real-time ke WhatsApp.",
-    impact: "Waktu respons lead turun ke rata-rata 12 menit."
-  },
-  {
-    title: "Internal Approval Platform",
-    challenge: "Approval pengeluaran lambat karena alur manual.",
-    solution: "Web app approval multi-level dengan log aktivitas dan audit trail.",
-    impact: "Siklus approval menjadi 2x lebih cepat dalam 1 bulan pertama."
-  }
-];
+import projects from "../data/portfolio.json";
 ---
 
 <MainLayout
@@ -49,7 +29,10 @@ const projects = [
       <div class="grid-3">
         {
           projects.map((project, index) => (
-            <article class={`card hover-lift reveal-delay-${Math.min(index + 1, 3)}`}>
+            <article class={`card hover-lift portfolio-card reveal-delay-${Math.min(index + 1, 3)}`}>
+              <figure class="portfolio-thumb">
+                <img src={project.image} alt={project.imageAlt} loading="lazy" />
+              </figure>
               <h3>{project.title}</h3>
               <p><strong>Tantangan:</strong> {project.challenge}</p>
               <p><strong>Solusi:</strong> {project.solution}</p>
