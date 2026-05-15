@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { breadcrumbSchema, webPageSchema } from "../lib/structured-data";
+import { breadcrumbSchema, portfolioItemListSchema, webPageSchema } from "../lib/structured-data";
 import projects from "../data/portfolio.json";
 ---
 
@@ -8,6 +8,7 @@ import projects from "../data/portfolio.json";
   title="Portfolio | aretos.id"
   description="Studi kasus website dan aplikasi yang dikerjakan aretos.id beserta dampak bisnisnya."
   canonicalPath="/portfolio"
+  ogImageAlt="Portfolio aretos.id — Studi kasus website dan aplikasi bisnis"
   keywords={["portfolio website", "studi kasus web app", "jasa aplikasi bisnis"]}
   structuredData={[
     webPageSchema(
@@ -18,7 +19,8 @@ import projects from "../data/portfolio.json";
     breadcrumbSchema([
       { name: "Beranda", path: "/" },
       { name: "Portfolio", path: "/portfolio" }
-    ])
+    ]),
+    portfolioItemListSchema(projects)
   ]}
 >
   <section class="section reveal">

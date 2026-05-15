@@ -1,6 +1,9 @@
 {
-  "name": "Aretos",
-  "short_name": "Aretos",
+  "name": "aretos.id",
+  "short_name": "aretos.id",
+  "description": "Partner pengembangan website dan aplikasi bisnis.",
+  "start_url": "/",
+  "lang": "id",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

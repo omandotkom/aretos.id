@@ -7,12 +7,13 @@ interface Props {
   description: string;
   canonicalPath?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   noindex?: boolean;
   keywords?: string[];
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, canonicalPath, ogImage, noindex, keywords, structuredData } = Astro.props as Props;
+const { title, description, canonicalPath, ogImage, ogImageAlt, noindex, keywords, structuredData } = Astro.props as Props;
 const canonicalUrl = absoluteUrl(canonicalPath ?? Astro.url.pathname);
 const ogImageUrl = absoluteUrl(ogImage ?? "/aretos.png");
 const robotsContent = noindex ? "noindex,nofollow" : "index,follow,max-image-preview:large";
@@ -50,7 +51,7 @@ const navItems = [
     <meta property="og:site_name" content="aretos.id" />
     <meta property="og:locale" content="id_ID" />
     <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:alt" content="aretos.id website preview" />
+    <meta property="og:image:alt" content={ogImageAlt ?? title} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
