@@ -36,6 +36,9 @@ export function organizationSchema() {
     description: "Jasa pembuatan website dan aplikasi untuk kebutuhan bisnis.",
     email: "hello@aretos.id",
     telephone: "+6281318726585",
+    sameAs: [
+      "https://www.linkedin.com/company/aretos-id",
+    ],
     knowsAbout: ORGANIZATION_KNOWS_ABOUT,
     contactPoint: [
       {
@@ -129,6 +132,40 @@ export function faqSchema(items: FaqItem[]) {
       acceptedAnswer: {
         "@type": "Answer",
         text: item.answer,
+      },
+    })),
+  };
+}
+
+
+type PortfolioItem = {
+  title: string;
+  challenge: string;
+  solution: string;
+  impact: string;
+  image: string;
+  imageAlt: string;
+};
+
+export function portfolioItemListSchema(items: PortfolioItem[]) {
+  return {
+    "@type": "ItemList",
+    name: "Portfolio aretos.id",
+    description: "Studi kasus website dan aplikasi yang dikerjakan aretos.id.",
+    url: absoluteUrl("/portfolio"),
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: item.title,
+        description: item.challenge,
+        abstract: item.impact,
+        image: absoluteUrl(item.image),
+        creator: {
+          "@id": `${SITE_URL}/#organization`,
+        },
       },
     })),
   };
