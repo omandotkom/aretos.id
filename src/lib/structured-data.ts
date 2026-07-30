@@ -140,6 +140,7 @@ export function faqSchema(items: FaqItem[]) {
 
 type PortfolioItem = {
   title: string;
+  url?: string;
   challenge: string;
   solution: string;
   impact: string;
@@ -160,6 +161,7 @@ export function portfolioItemListSchema(items: PortfolioItem[]) {
       item: {
         "@type": "CreativeWork",
         name: item.title,
+        ...(item.url ? { url: item.url } : {}),
         description: item.challenge,
         abstract: item.impact,
         image: absoluteUrl(item.image),

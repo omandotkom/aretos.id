@@ -1,6 +1,7 @@
 [
   {
     "title": "yhschurch.com",
+    "url": "https://yhschurch.com",
     "challenge": "Gereja YHS dengan 60 cabang gereja yang tersebar di seluruh Indonesia membutuhkan website profil resmi dengan tampilan yang menarik, informasi lokasi gereja yang lengkap, dan mempermudah jemaat dalam mendapatkan pelayanan dari gereja.",
     "solution": "Pembuatan website profil resmi gereja YHS dengan tampilan yang lebih modern dan penuh dengan fungsionalitas. Pengguna bisa mendapatkan informasi detail Tentang Gereja YHS, mendapatkan informasi lokasi Gereja YHS terdekat, bergabung dengan komunitas, mendapatkan pelayanan pastoral yang dibutuhkan dengan respon yang cepat, menikmati konten kotbah dan pujian penyembahan karya gereja YHS, hingga bisa mendapatkan informasi dan konsultasi 24/7 dengan bantuan YHS AI Assistant",
     "impact": "Respon yang sangat baik dari ketua sinode dan seluruh jemaat gereja YHS di seluruh Indonesia saat website ini dilaunching karena berbagai kemudahan dan fungsionalitasnya.",
@@ -9,6 +10,7 @@
   },
   {
     "title": "Hubnesia.com",
+    "url": "https://hubnesia.com",
     "challenge": "Membutuhkan sistem digitalisasi pembelian nomor verifikasi handphone dan layanan digital lainnya.",
     "solution": "Pembuatan sistem yang dapat menangkap sms verifikasi masuk dari berbagai negara dan layanan, terintegrasi dengan payment gateway.",
     "impact": "Kenaikan transaksi, 3500 user di bulan pertama launching.",
@@ -17,6 +19,7 @@
   },
   {
     "title": "AppVerse.id",
+    "url": "https://appverse.id",
     "challenge": "Adanya kebutuhan terhadap situs direktori aplikasi terpusat yang menyatukan penyedia / pemilik saas dengan pengguna nya.",
     "solution": "Dibuatkan sistem terpadu yang dapat mengakomodir submit saas dan publikasinya.",
     "impact": "Saat ini sudah mendapat feedback dari submitter saas ada kenaikan user subscription semenjak saasnya di publish pada appverse.id",
@@ -25,6 +28,7 @@
   },
   {
     "title": "ibadahku.id",
+    "url": "https://ibadahku.id",
     "challenge": "Kebutuhan publikasi untuk website travel dan umroh untuk meningkatkan brand awareness supaya lebih dikenal khalayak umum.",
     "solution": "Website ibadahku.id yang mempublikasikan paket umroh dengan cta ke whatsapp, termasuk halaman admin yang dapat dimaintenance dengan mudah",
     "impact": "Closing rate meningkat 40%, kemudahan user mendapatkan informasi paket travel haji dan umroh yang tersedia. Termasuk meningkatkan brand trust dengan galleri bukti berbagai macam perjalanan.",
@@ -38,5 +42,14 @@
     "impact": "Peningkatan produktivitas karena kolaborasi dengan AI Agent yang melakukan tugas secara otomatis dan 24/7",
     "image": "/images/portfolio/Openclaw.png",
     "imageAlt": "Implementasi AI Agent OpenClaw"
+  },  
+  {
+    "title": "DompetWa.com",
+    "url": "https://dompetwa.com",
+    "challenge": "Pencatatan keuangan tidak perlu ribet pakai excel atau formulir yang membuat input data lebih rumit hingga akhirnya pengeluaran tidak tercatat",
+    "solution": "Client kami mengusulkan adanya sistem pencatatan keuangan berasis AI dengan media pencatatan via WhatsApp. Pengguna cukup mengetik pengeluaran sistem akan secara otomatis melakukan pencatatan. Misal : Makan 30k, Menabung 19k.",
+    "impact": "Transaksi keuangan akan lebih mudah tercatat, meminimalisir pengeluan dan pemasukan yang tidak tercatat, termasuk mempermudah jalur input nya. Tidak perlu membuka aplikasi yang harus login -> isi formulir -> lihat laporan. Dengan sistem ini cukup ketik semudah kirim chat.",
+    "image": "/images/portfolio/Screenshot 2026-07-30 225514.png",
+    "imageAlt": "Implementasi DompetWa"
   }
 ]
