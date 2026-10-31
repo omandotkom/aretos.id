@@ -1,5 +1,13 @@
 [
   {
+    "title": "Joybox Doll Adoption",
+    "challenge": "Joybox membutuhkan aplikasi photobooth yang hasil akhirnya adalah sertifikat adopsi boneka yang otomatis terisi sesuai data dari user",
+    "solution": "Membuatkan aplikasi photobooth berbasis web sesuai desain yang diminta oleh pihak Joybox + bonus halaman admin untuk pihak Joybox dapat mengganti template sertifikat adopsi sesuai kebutuhan",
+    "impact": "Aplikasi langsung digunakan saat granding opening store ke 2 Joybox di Mall Puri",
+    "image": "/images/portfolio/Joybox.png",
+    "imageAlt": "Joybox"
+  },
+  {
     "title": "yhschurch.com",
     "url": "https://yhschurch.com",
     "challenge": "Gereja YHS dengan 60 cabang gereja yang tersebar di seluruh Indonesia membutuhkan website profil resmi dengan tampilan yang menarik, informasi lokasi gereja yang lengkap, dan mempermudah jemaat dalam mendapatkan pelayanan dari gereja.",
