@@ -42,14 +42,6 @@
     "impact": "Closing rate meningkat 40%, kemudahan user mendapatkan informasi paket travel haji dan umroh yang tersedia. Termasuk meningkatkan brand trust dengan galleri bukti berbagai macam perjalanan.",
     "image": "/images/portfolio/Screenshot 2026-04-12 163429.png",
     "imageAlt": "Contoh tampilan platform approval internal"
-  },
-  {
-    "title": "Implementasi AI Agent OpenClaw",
-    "challenge": "Kebutuhan client akan personalized AI Agent yang dapat bekerja 24/7 mengeksekusi tugas yang telah diberikan secara otomatis.",
-    "solution": "Implementasi OpenClaw yang diintegrasikan dengan bot telegram dan skill gog (Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs)",
-    "impact": "Peningkatan produktivitas karena kolaborasi dengan AI Agent yang melakukan tugas secara otomatis dan 24/7",
-    "image": "/images/portfolio/Openclaw.png",
-    "imageAlt": "Implementasi AI Agent OpenClaw"
   },  
   {
     "title": "DompetWa.com",
@@ -59,5 +51,13 @@
     "impact": "Transaksi keuangan akan lebih mudah tercatat, meminimalisir pengeluan dan pemasukan yang tidak tercatat, termasuk mempermudah jalur input nya. Tidak perlu membuka aplikasi yang harus login -> isi formulir -> lihat laporan. Dengan sistem ini cukup ketik semudah kirim chat.",
     "image": "/images/portfolio/Screenshot 2026-07-30 225514.png",
     "imageAlt": "Implementasi DompetWa"
+  },
+  {
+    "title": "Implementasi AI Agent OpenClaw",
+    "challenge": "Kebutuhan client akan personalized AI Agent yang dapat bekerja 24/7 mengeksekusi tugas yang telah diberikan secara otomatis.",
+    "solution": "Implementasi OpenClaw yang diintegrasikan dengan bot telegram dan skill gog (Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs)",
+    "impact": "Peningkatan produktivitas karena kolaborasi dengan AI Agent yang melakukan tugas secara otomatis dan 24/7",
+    "image": "/images/portfolio/Openclaw.png",
+    "imageAlt": "Implementasi AI Agent OpenClaw"
   }
 ]
